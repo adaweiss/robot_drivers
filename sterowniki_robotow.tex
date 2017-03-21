@@ -5,7 +5,7 @@
 \usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
 \usepackage{indentfirst}
 \usepackage{enumerate}
-
+\usepackage{hyperref}
 \makeatletter
 \newcommand{\linia}{\rule{\linewidth}{0.4mm}}
 \renewcommand{\maketitle}{\begin{titlepage}  
@@ -54,16 +54,22 @@ Ada Weiss 218641 }%wpisać indeks
 
 \newpage
 \section{Cel projektu}
-Celem projektu jest zapoznanie się z programowaniem płytki deweloperskiej STM32L476G-DISCO z wykorzystaniem różnych preyferiów mikrokontrolera.
+Celem projektu jest zapoznanie się z programowaniem płytki deweloperskiej STM32L476G-DISCO oraz wykorzystanie różnych peryferiów mikrokontrolera.
 \section{Opis projektu}
-Zamieniamy
 
+Zadanie polega na tym, aby odczytywać dane z wewnętrznego termometru w określonych odstępach czasowych
+jednoczenie odczytując czas z RTC\\
+Następnie dane te mają być zapisywane w pamięci Flash. Zapamiętywanych jest 100 ostatnich wyników. Pamięć obsługiwana ma być w taki sposób, aby:
+\begin{itemize}
+    \item pamiętać ostatnie miejsce w pamięci gdzie została wpisana temperatura
+    \item w przypadku przekroczenia dostępnego miejsca wyniki kolejno nadpisywały się w pamięci
+\end{itemize}
 
-
+Ostatnią częścią projektu będzie obsługa wyświetlacza LCD umożliwiająca za pomocą joysticka przejrzenie wszystkich zapisanych w pamięci pomiarów.
 
 \begin{thebibliography}{99}
-\bibitem{pa} Dokumentacja płytki deweloperskiej
-\emph{http://dl.btc.pl/kamami_wa/STM32L476G-DISCO_USER_MANUAL.pdf}, 
+\bibitem{pa} Dokumentacja płytki deweloperskiej 
+\url {http://www.st.com/content/ccc/resource/technical/document/user_manual/d1/84/86/4b/08/82/47/91/DM00172179.pdf/files/DM00172179.pdf/jcr:content/translations/en.DM00172179.pdf}
 
 \end{thebibliography}
 \end{document}
