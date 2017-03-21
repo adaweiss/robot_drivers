@@ -43,7 +43,7 @@ Prowadzący:\\
 \makeatother
 \author{Beata Berajter 218629\\
 Ada Weiss 218641 }%wpisać indeks
-\title{Logger danych.\\Akwizycja danych o temperaturze wraz z przeglądaniem danych archiwalnych na LCD }
+\title{Logger danych.\\Akwizycja danych o temperaturze wraz z przeglądaniem danych archiwalnych na wyświetlaczu LCD }
 
 
 \begin{document}
@@ -59,10 +59,10 @@ Celem projektu jest zapoznanie się z programowaniem płytki deweloperskiej STM3
 
 Zadanie polega na tym, aby odczytywać dane z wewnętrznego termometru w określonych odstępach czasowych
 jednoczenie odczytując czas z RTC\\
-Następnie dane te mają być zapisywane w pamięci Flash. Zapamiętywanych jest 100 ostatnich wyników. Pamięć obsługiwana ma być w taki sposób, aby:
+Następnie dane te mają być przesyłane przez Quad SPI do pamięci zewnętrznej Flash. Zapamiętywanych jest 100 ostatnich wyników. Pamięć obsługiwana ma być w taki sposób, aby:
 \begin{itemize}
-    \item pamiętać ostatnie miejsce w pamięci gdzie została wpisana temperatura
-    \item w przypadku przekroczenia dostępnego miejsca wyniki kolejno nadpisywały się w pamięci
+    \item zapisywać ostatnie miejsce w pamięci, w które został wpisany pomiar,
+    \item w przypadku przekroczenia dostępnego miejsca - wyniki kolejno nadpisywały się w pamięci.
 \end{itemize}
 
 Ostatnią częścią projektu będzie obsługa wyświetlacza LCD umożliwiająca za pomocą joysticka przejrzenie wszystkich zapisanych w pamięci pomiarów.
@@ -70,6 +70,8 @@ Ostatnią częścią projektu będzie obsługa wyświetlacza LCD umożliwiająca
 \begin{thebibliography}{99}
 \bibitem{pa} Dokumentacja płytki deweloperskiej 
 \url {http://www.st.com/content/ccc/resource/technical/document/user_manual/d1/84/86/4b/08/82/47/91/DM00172179.pdf/files/DM00172179.pdf/jcr:content/translations/en.DM00172179.pdf}
+\bibitem{pa} Application note. Quad-SPI (QSPI) interface on STM32 microcontrollers
+\url {http://www.st.com/content/ccc/resource/technical/document/application_note/group0/b0/7e/46/a8/5e/c1/48/01/DM00227538/files/DM00227538.pdf/jcr:content/translations/en.DM00227538.pdf}
 
 \end{thebibliography}
 \end{document}
